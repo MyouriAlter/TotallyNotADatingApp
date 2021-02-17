@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using TotallyNotADatingApp_.DatabaseEntity;
+using TotallyNotADatingApp.DatabaseEntity;
 
-namespace TotallyNotADatingApp_.Migrations
+namespace TotallyNotADatingApp.Migrations
 {
     [DbContext(typeof(ApplicationDatabaseEntity))]
     [Migration("20210210135933_InitialVersion")]

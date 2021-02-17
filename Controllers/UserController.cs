@@ -2,18 +2,18 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TotallyNotADatingApp_.DatabaseEntity;
-using TotallyNotADatingApp_.Entities;
+using TotallyNotADatingApp.DatabaseEntity;
+using TotallyNotADatingApp.Entities;
 
-namespace TotallyNotADatingApp_.Controllers
+namespace TotallyNotADatingApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly ApplicationDatabaseEntity _database;
 
-        public UsersController(ApplicationDatabaseEntity database)
+        public UserController(ApplicationDatabaseEntity database)
         {
             _database = database;
         }

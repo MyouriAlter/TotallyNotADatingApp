@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>TotallyNotADatingApp</RootNamespace>
-    <StartupObject>TotallyNotADatingApp_.Program</StartupObject>
+    <StartupObject>TotallyNotADatingApp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

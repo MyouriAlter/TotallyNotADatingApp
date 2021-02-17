@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TotallyNotADatingApp_.Entities;
+using TotallyNotADatingApp.Entities;
 
-namespace TotallyNotADatingApp_.DatabaseEntity
+namespace TotallyNotADatingApp.DatabaseEntity
 {
     public class ApplicationDatabaseEntity : DbContext
     {
         public ApplicationDatabaseEntity(DbContextOptions<ApplicationDatabaseEntity> options) : base(options)
-        { }
+        {
+        }
 
         public DbSet<AppUser> Users { get; set; }
     }
