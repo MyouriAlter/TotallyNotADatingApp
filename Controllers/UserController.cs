@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TotallyNotADatingApp.DatabaseEntity;
@@ -7,9 +8,7 @@ using TotallyNotADatingApp.Entities;
 
 namespace TotallyNotADatingApp.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : BaseApiController
     {
         private readonly ApplicationDatabaseEntity _database;
 
@@ -18,19 +17,19 @@ namespace TotallyNotADatingApp.Controllers
             _database = database;
         }
 
-        //get all users
-        //api/users
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
             return await _database.Users.ToListAsync();
         }
-
-        //api/users/{id}
+        
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUser(int id)
         {
             return await _database.Users.FindAsync(id);
         }
     }
+    
 }
