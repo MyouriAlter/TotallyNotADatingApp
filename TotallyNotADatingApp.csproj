@@ -49,10 +49,20 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="client\src\app\homepage\home.component.ts" />
+    <TypeScriptCompile Include="client\src\app\member\member-detail\member-detail.component.ts" />
+    <TypeScriptCompile Include="client\src\app\member\member-list\member-list.component.ts" />
     <TypeScriptCompile Include="client\src\app\nav\nav.component.ts" />
+    <TypeScriptCompile Include="client\src\app\_guards\auth.guard.ts" />
+    <TypeScriptCompile Include="client\src\app\_models\user.ts" />
+    <TypeScriptCompile Include="client\src\app\_modules\shared.module.ts" />
+    <TypeScriptCompile Include="client\src\app\_services\account.service.ts" />
     <TypeScriptCompile Include="client\src\_services\account.service.ts" />
     <TypeScriptCompile Remove="client\src\_services\account.service.ts" />
-    <TypeScriptCompile Include="client\_models\user.ts" />
+    <TypeScriptCompile Remove="client\_services\account.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="client\src\app\member" />
   </ItemGroup>
 
 </Project>
